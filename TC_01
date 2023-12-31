@@ -1,0 +1,63 @@
+package TestCase;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import com.SeleniumPractice.BaseClass;
+
+public class TC_01 extends BaseClass {
+
+	public static void main(String[] args) throws InterruptedException {
+
+		driverSetup("Chrome");
+		get("https://automationexercise.com/");
+		isVisible("//ul[@class='nav navbar-nav']//a[text()=' Home']//i[@class='fa fa-home']", "Home");
+
+		clicklElement("//ul[@class='nav navbar-nav']//a[text()=' Signup / Login']");
+		isVisible("//div[@class='signup-form']//h2[text()='New User Signup!']", "New Sign Up!");
+
+		sendDetails("//input[@placeholder='Name']", "vinay");
+		sendDetails("(//input[@placeholder='Email Address'])[2]", "hellovinayupadhyay@gmail.com");
+		clicklElement("(//button[@class='btn btn-default'])[2]");
+
+		clicklElement("//div[@id='uniform-id_gender1']");
+
+		clicklElement("//input[@id='password']");
+		sendDetails("//input[@id='password']", "12345678");
+
+		dropdown("//select[@id='days']", 27);
+		dropdown("//select[@id='months']", 5);
+		dropdownbyValue("//select[@id='years']", "2000");
+
+		sendDetailsByID("first_name", "Vinay");
+		sendDetailsByID("last_name", "Upadhyay");
+		sendDetailsByID("address1", "Dummy Address");
+		sendDetailsByID("address2", "Dummy Address2");
+		sendDetailsByID("state", "Dummy State");
+		sendDetailsByID("city", "Dummy city");
+		sendDetailsByID("zipcode", "600089");
+		sendDetailsByID("mobile_number", "9373182671");
+		sendDetailsByID("first_name", "Vinay");
+		clicklElement("//button[text()='Create Account']");
+
+		boolean displayed = driver.findElement(By.xpath("//b['ACCOUNT CREATED!']")).isDisplayed();
+		if (displayed = true) {
+			clicklElement("//a[text()='Continue']");
+		} else {
+			System.err.println("ACCOUNT CREATED! is not Visible");
+			System.err.println("Account Creation Failed");
+		}
+
+		isVisible("//b['ACCOUNT CREATED!']", "Account Creation!");
+		isVisible("//li[10]//a[1]", "Logged in as Username");
+
+		Thread.sleep(3000);
+		
+		clicklElement("//li[5]");
+		isVisible("//b['Account Deleted!']", "Account Deleted!");
+		clicklElement("//a[text()='Continue']");
+
+		tearDown();
+	}
+
+}
