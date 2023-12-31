@@ -97,4 +97,72 @@ public class BaseClass {
 		Thread.sleep(Sec);
 	}
 
+	public static void driverSetup(String Browser) {
+		if (Browser.equalsIgnoreCase("Chrome")) {
+			driver = new ChromeDriver();
+		} else {
+			System.err.println("Current Only Chrome browser supported");
+		}
+
+	}
+
+	public static void Navigate(String nextURL) {
+		driver.navigate().to(nextURL);
+	}
+
+	public static void get(String URL) {
+		driver.get(URL);
+		driver.manage().window().maximize();
+	}
+
+	public static boolean isVisible(String ElementxPath, String ElementName) {
+		WebElement Element = driver.findElement(By.xpath(ElementxPath));
+		if (Element.isDisplayed()==true) {
+			System.out.println (ElementName +" is Visible");
+		}
+		else {
+			System.err.println(ElementName +" is not Visible");
+		}
+		System.out.println(Element.getText());
+		System.out.println();
+		return Element.isDisplayed();
+	}
+
+	public static void clicklElement(String xPath) {
+		driver.findElement(By.xpath(xPath)).click();
+	}
+
+	public static void buttonClick(String ElementXPath) {
+		WebElement webElement = driver.findElement(By.xpath(ElementXPath));
+		webElement.click();
+	}
+
+	public static void sendDetailsByID(String ID, String Detail) {
+		WebElement Element = driver.findElement(By.id(ID));
+		Element.sendKeys(Detail);
+	}
+	
+	public static void sendDetails(String xPath, String Details) {
+		WebElement Element = driver.findElement(By.xpath(xPath));
+		Element.click();
+		Element.sendKeys(Details);
+	}
+	
+	public static void dropdown(String xPath, int Value) {
+		WebElement Element = driver.findElement(By.xpath(xPath));
+		Element.click();
+		Select dd = new Select (Element);
+		dd.selectByIndex(Value);
+	}
+	
+	public static void dropdownbyValue(String xPath, String Value) {
+		WebElement Element = driver.findElement(By.xpath(xPath));
+		Select dd = new Select (Element);
+		dd.selectByValue(Value);
+	}
+	
+	public static void tearDown() {
+		driver.quit();
+	}
+
 }
