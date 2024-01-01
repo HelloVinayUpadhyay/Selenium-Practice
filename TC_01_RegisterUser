@@ -41,7 +41,7 @@ public class TC_01 extends BaseClass {
 		clicklElement("//button[text()='Create Account']");
 
 		boolean displayed = driver.findElement(By.xpath("//b['ACCOUNT CREATED!']")).isDisplayed();
-		if (displayed = true) {
+		if (displayed == true) {
 			clicklElement("//a[text()='Continue']");
 		} else {
 			System.err.println("ACCOUNT CREATED! is not Visible");
