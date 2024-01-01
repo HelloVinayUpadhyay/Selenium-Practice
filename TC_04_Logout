@@ -1,6 +1,6 @@
 package com.SeleniumPractice;
 
-public class TC_04_Loguut extends BaseClass {
+public class TC_04_Logout extends BaseClass {
 //User Logout Feature
 	public static void main(String[] args) throws InterruptedException {
 		
