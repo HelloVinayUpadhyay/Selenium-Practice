@@ -1,0 +1,23 @@
+package TestCase;
+
+import com.SeleniumPractice.BaseClass;
+
+public class TC_02 extends BaseClass {
+//Login User with correct email and password
+	
+	public static void main(String[] args) {
+
+		driverSetup("Chrome");
+		get("https://automationexercise.com/");
+		isVisible("//a[normalize-space()='Home']", "Home");
+		clicklElement("//a[text()=' Signup / Login']");
+		isVisible("//h2[normalize-space()='Login to your account']", "Login to your account");
+		sendDetails("(//input[@placeholder='Email Address'])[1]", "hellovinayupadhyay@gmail.com");
+		sendDetails("//input[@placeholder='Password']", "12345678");
+		clicklElement("//button[text()='Login']");
+		isVisible("//div[@class='shop-menu pull-right']//ul[@class='nav navbar-nav']//li[10]", "Logged in as");
+		clicklElement("//div[@class='shop-menu pull-right']//ul[@class='nav navbar-nav']//li[5]");
+		isVisible("//b['Account Deleted!']", "Account Deleted!");
+	}
+
+}
