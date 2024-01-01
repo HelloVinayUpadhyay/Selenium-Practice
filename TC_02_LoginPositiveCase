@@ -2,9 +2,9 @@ package TestCase;
 
 import com.SeleniumPractice.BaseClass;
 
-public class TC_02 extends BaseClass {
+public class TC_02_LoginPositiveCase extends BaseClass {
 //Login User with correct email and password
-	
+
 	public static void main(String[] args) {
 
 		driverSetup("Chrome");
