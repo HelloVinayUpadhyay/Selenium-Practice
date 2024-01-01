@@ -16,7 +16,7 @@ public class TC_01_RegisterUser extends BaseClass {
 		clicklElement("//ul[@class='nav navbar-nav']//a[text()=' Signup / Login']");
 		isVisible("//div[@class='signup-form']//h2[text()='New User Signup!']", "New Sign Up!");
 
-		sendDetails("//input[@placeholder='Name']", "vinay");
+		sendDetails("//input[@placeholder='Name']", "Vinay");
 		sendDetails("(//input[@placeholder='Email Address'])[2]", "hellovinayupadhyay@gmail.com");
 		clicklElement("(//button[@class='btn btn-default'])[2]");
 
