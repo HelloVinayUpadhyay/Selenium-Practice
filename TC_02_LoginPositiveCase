@@ -14,7 +14,7 @@ public class TC_02_LoginPositiveCase extends BaseClass {
 		isVisible("//h2[normalize-space()='Login to your account']", "Login to your account");
 		sendDetails("(//input[@placeholder='Email Address'])[1]", "hellovinayupadhyay@gmail.com");
 		sendDetails("//input[@placeholder='Password']", "12345678");
-		clicklElement("//button[text()='Login']");
+		clicklElement("//button[text()='Login']"); 
 		isVisible("//div[@class='shop-menu pull-right']//ul[@class='nav navbar-nav']//li[10]", "Logged in as");
 		clicklElement("//div[@class='shop-menu pull-right']//ul[@class='nav navbar-nav']//li[5]");
 		isVisible("//b['Account Deleted!']", "Account Deleted!");
