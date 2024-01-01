@@ -1,0 +1,26 @@
+package TestCase;
+
+import com.SeleniumPractice.BaseClass;
+
+public class TC_03_LoginNegativeTestCase extends BaseClass {
+	// Login User with incorrect email and password
+
+	public static void main(String[] args) {
+
+		driverSetup("chrome");
+		invokeBroser("http://automationexercise.com");
+		isVisible("//ul[@class='nav navbar-nav']//a[text()=' Home']//i[@class='fa fa-home']", "Home");
+
+		clicklElement("//ul[@class='nav navbar-nav']//a[text()=' Signup / Login']");
+		isVisible("//div[@class='login-form']//h2[text()='Login to your account']", "Login to your account");
+
+		sendDetails("//input[@placeholder='Email Address']", "hellovinayupadhyay@gmail.com");
+		sendDetails("//input[@placeholder='Password']", "111111111");
+		clicklElement("//button[text()='Login']");
+
+		isVisible("//p['Your email or password is incorrect!']", "Your email or password is incorrect!");
+		tearDown();
+
+	}
+
+}
