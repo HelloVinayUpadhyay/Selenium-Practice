@@ -57,7 +57,7 @@ public class TC_01 extends BaseClass {
 		isVisible("//b['Account Deleted!']", "Account Deleted!");
 		clicklElement("//a[text()='Continue']");
 
-		tearDown();
+		tearDown(); 
 	}
 
 }
