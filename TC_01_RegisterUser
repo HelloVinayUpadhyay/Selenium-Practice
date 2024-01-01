@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 
 import com.SeleniumPractice.BaseClass;
 
-public class TC_01 extends BaseClass {
+public class TC_01_RegisterUser extends BaseClass {
 
 	public static void main(String[] args) throws InterruptedException {
 
