@@ -1,0 +1,31 @@
+package TestCase;
+
+import com.SeleniumPractice.BaseClass;
+
+public class TC_05_SignUpNegativeCase extends BaseClass {
+
+	public static void main(String[] args) {
+
+		driverSetup("Chrome");
+		get("https://automationexercise.com/");
+
+		isVisible("//a[normalize-space()='Home']", "Home");
+		clicklElement("//a[text()=' Signup / Login']");
+		isVisible("//h2[normalize-space()='New User Signup!']", "New User Signup!");
+
+		sendDetails("//input[@placeholder='Name']", "Vinay");
+		sendDetails("(//input[@placeholder='Email Address'])[2]", "hellovinayupadhyay@gmail.com");
+		clicklElement("//button[text()='Signup']");
+
+		boolean visible = isVisible("//p[normalize-space()='Email Address already exist!']",
+				"Email Address already exist!");
+
+		if (visible == true) {
+			System.out.println("Test Case Passed!");
+		} else {
+			System.err.println("Test Case Failed!");
+		}
+
+	}
+
+}
