@@ -160,7 +160,33 @@ public class BaseClass {
 		Select dd = new Select (Element);
 		dd.selectByValue(Value);
 	}
-	
+
+
+public static void uploadFile(String xPath, String fileLocation) {
+		WebElement element = driver.findElement(By.xpath(xPath));
+		element.sendKeys(fileLocation);
+	}
+
+	public static void alartPrompt() {
+		driver.switchTo().alert().accept();
+	}
+
+	public static void alartConfermation(String YorN) {
+
+		if (YorN.equalsIgnoreCase("Y")) {
+			driver.switchTo().alert().accept();
+		} else if (YorN.equalsIgnoreCase("N")) {
+			driver.switchTo().alert().dismiss();
+		} else {
+			System.out.println("Enter only Y or N");
+		}
+
+	}
+
+	public static void alartAccept() {
+		driver.switchTo().alert().accept();
+	}
+
 	public static void tearDown() {
 		driver.quit();
 	}
