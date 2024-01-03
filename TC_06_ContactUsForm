@@ -1,0 +1,29 @@
+package TestCase;
+
+import com.SeleniumPractice.BaseClass;
+
+public class TC_04_Logout extends BaseClass {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		
+		driverSetup("chrome");
+		invokeBroser("http://automationexercise.com");
+		isVisible("//ul[@class='nav navbar-nav']//a[text()=' Home']//i[@class='fa fa-home']", "Home");
+		
+
+		clicklElement("//ul[@class='nav navbar-nav']//a[text()=' Signup / Login']");
+		isVisible("//div[@class='login-form']//h2[text()='Login to your account']", "Login to your account");
+
+		sendDetails("//input[@placeholder='Email Address']", "hellovinayupadhyay@gmail.com");
+		sendDetails("//input[@placeholder='Password']", "12345678");
+		clicklElement("//button[text()='Login']");
+		
+		isVisible("//li[10]//a[1]", "Logged in as Username");
+		Thread.sleep(3000);
+		
+		isVisible("//li[4]", "Logout");
+		tearDown();
+		
+	}
+}
