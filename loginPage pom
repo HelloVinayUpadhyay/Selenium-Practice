@@ -1,0 +1,239 @@
+package com.ECommerce.pom;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class loginPage {
+
+	@FindBy(xpath = "//ul[@class='nav navbar-nav']//a[text()=' Home']//i[@class='fa fa-home']\", \"Home")
+	private WebElement HomeLink;
+
+	@FindBy(xpath = "//input[@placeholder='Name']")
+	private WebElement InputUsername;
+
+	@FindBy(xpath = "(//input[@placeholder='Email Address'])[2]")
+	private WebElement InputMail;
+
+	@FindBy(xpath = "(//button[@class='btn btn-default'])[2]")
+	private WebElement ButtonSignUp;
+
+	@FindBy(id = "uniform-id_gender1")
+	private WebElement RadioButtonMale;
+
+	@FindBy(id = "uniform-id_gender2")
+	private WebElement RadioButtonFemail;
+
+	@FindBy(id = "password")
+	private WebElement inputPassword;
+
+	@FindBy(xpath = "//select[@id='days']")
+	private WebElement DropDownDay;
+
+	@FindBy(xpath = "//select[@id='months']")
+	private WebElement DropDownMonths;
+
+	@FindBy(xpath = "//select[@id='years']")
+	private WebElement DropDownYear;
+
+	@FindBy(id = "first_name")
+	private WebElement inputFirstName;
+
+	@FindBy(id = "last_name")
+	private WebElement inputLatName;
+
+	@FindBy(id = "address1")
+	private WebElement inputAddress1;
+
+	@FindBy(id = "address2")
+	private WebElement inputinputAddress2;
+
+	@FindBy(id = "state")
+	private WebElement inputState;
+
+	@FindBy(id = "city")
+	private WebElement inputCity;
+
+	@FindBy(id = "zipcode")
+	private WebElement inputZipcode;
+
+	@FindBy(id = "mobile_number")
+	private WebElement inputMobile;
+
+	@FindBy(xpath = "//button[text()='Create Account']")
+	private WebElement buttonCreateAccount;
+
+	@FindBy(xpath = "//b['ACCOUNT CREATED!']")
+	private WebElement textAccountCreated;
+
+	@FindBy(xpath = "//li[10]//a[1]")
+	private WebElement Logoutlink;
+
+	public WebElement getHomeLink() {
+		return HomeLink;
+	}
+
+	public void setHomeLink(WebElement homeLink) {
+		HomeLink = homeLink;
+	}
+
+	public WebElement getInputUsername() {
+		return InputUsername;
+	}
+
+	public void setInputUsername(WebElement inputUsername) {
+		InputUsername = inputUsername;
+	}
+
+	public WebElement getInputMail() {
+		return InputMail;
+	}
+
+	public void setInputMail(WebElement inputMail) {
+		InputMail = inputMail;
+	}
+
+	public WebElement getButtonSignUp() {
+		return ButtonSignUp;
+	}
+
+	public void setButtonSignUp(WebElement buttonSignUp) {
+		ButtonSignUp = buttonSignUp;
+	}
+
+	public WebElement getRadioButtonMale() {
+		return RadioButtonMale;
+	}
+
+	public void setRadioButtonMale(WebElement radioButtonMale) {
+		RadioButtonMale = radioButtonMale;
+	}
+
+	public WebElement getRadioButtonFemail() {
+		return RadioButtonFemail;
+	}
+
+	public void setRadioButtonFemail(WebElement radioButtonFemail) {
+		RadioButtonFemail = radioButtonFemail;
+	}
+
+	public WebElement getInputPassword() {
+		return inputPassword;
+	}
+
+	public void setInputPassword(WebElement inputPassword) {
+		this.inputPassword = inputPassword;
+	}
+
+	public WebElement getDropDownDay() {
+		return DropDownDay;
+	}
+
+	public void setDropDownDay(WebElement dropDownDay) {
+		DropDownDay = dropDownDay;
+	}
+
+	public WebElement getDropDownMonths() {
+		return DropDownMonths;
+	}
+
+	public void setDropDownMonths(WebElement dropDownMonths) {
+		DropDownMonths = dropDownMonths;
+	}
+
+	public WebElement getDropDownYear() {
+		return DropDownYear;
+	}
+
+	public void setDropDownYear(WebElement dropDownYear) {
+		DropDownYear = dropDownYear;
+	}
+
+	public WebElement getInputFirstName() {
+		return inputFirstName;
+	}
+
+	public void setInputFirstName(WebElement inputFirstName) {
+		this.inputFirstName = inputFirstName;
+	}
+
+	public WebElement getInputLatName() {
+		return inputLatName;
+	}
+
+	public void setInputLatName(WebElement inputLatName) {
+		this.inputLatName = inputLatName;
+	}
+
+	public WebElement getInputAddress1() {
+		return inputAddress1;
+	}
+
+	public void setInputAddress1(WebElement inputAddress1) {
+		this.inputAddress1 = inputAddress1;
+	}
+
+	public WebElement getInputinputAddress2() {
+		return inputinputAddress2;
+	}
+
+	public void setInputinputAddress2(WebElement inputinputAddress2) {
+		this.inputinputAddress2 = inputinputAddress2;
+	}
+
+	public WebElement getInputState() {
+		return inputState;
+	}
+
+	public void setInputState(WebElement inputState) {
+		this.inputState = inputState;
+	}
+
+	public WebElement getInputCity() {
+		return inputCity;
+	}
+
+	public void setInputCity(WebElement inputCity) {
+		this.inputCity = inputCity;
+	}
+
+	public WebElement getInputZipcode() {
+		return inputZipcode;
+	}
+
+	public void setInputZipcode(WebElement inputZipcode) {
+		this.inputZipcode = inputZipcode;
+	}
+
+	public WebElement getInputMobile() {
+		return inputMobile;
+	}
+
+	public void setInputMobile(WebElement inputMobile) {
+		this.inputMobile = inputMobile;
+	}
+
+	public WebElement getButtonCreateAccount() {
+		return buttonCreateAccount;
+	}
+
+	public void setButtonCreateAccount(WebElement buttonCreateAccount) {
+		this.buttonCreateAccount = buttonCreateAccount;
+	}
+
+	public WebElement getTextAccountCreated() {
+		return textAccountCreated;
+	}
+
+	public void setTextAccountCreated(WebElement textAccountCreated) {
+		this.textAccountCreated = textAccountCreated;
+	}
+
+	public WebElement getLogoutlink() {
+		return Logoutlink;
+	}
+
+	public void setLogoutlink(WebElement logoutlink) {
+		Logoutlink = logoutlink;
+	}
+
+}
